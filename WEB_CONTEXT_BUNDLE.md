@@ -75,7 +75,21 @@ This file is generated from repository truth and bounded for the web channel. It
     }
   ],
   "attempts": [],
-  "failed_routes": [],
+  "failed_routes": [
+    {
+      "blocker": "blow-up 为 Galerkin 截断伪影：N=96 消失，T∝α^-1.58 缩放与去混叠截断一致；不构成 Clay (C)/(D) 反例",
+      "conclusion": "artifact",
+      "evidence": [
+        "governance/tasks/0012-millennium-navier-stokes/PHASE2_EVIDENCE_lt07_round1.json",
+        "governance/tasks/0012-millennium-navier-stokes/PHASE2_CHECKPOINT.md"
+      ],
+      "problem_id": "problem:millennium-navier-stokes",
+      "recorded_at": "2026-08-18T23:51:00+08:00",
+      "recorded_by": "orchestrator",
+      "route": "C3 族 N=64 有限时间 blow-up 数值搜索（α=5/10/20）",
+      "route_id": "route:ns-c3-blowup-family-20260818"
+    }
+  ],
   "knowledge_operators": [
     {
       "evidence_ceiling": "discovery_only",
@@ -208,72 +222,95 @@ This file is generated from repository truth and bounded for the web channel. It
     "acceptance": {
       "policy": "solution-admission-v1"
     },
-    "aliases": [],
+    "aliases": [
+      "Navier-Stokes Existence and Smoothness",
+      "Navier–Stokes Equation"
+    ],
     "allowed_axioms": [
-      "none"
+      "classical-mathematics",
+      "standard-real-analysis",
+      "standard-partial-differential-equations"
     ],
     "assumptions": [
-      "This record must never be treated as an active research problem."
+      "Only hypotheses explicitly present in the frozen official statement and the selected accepted branch are admitted.",
+      "Finite computation, restricted models, conditional lemmas and special cases do not close the universal root statement.",
+      "Statement-faithfulness and current-status review must close before Result admission."
     ],
     "constraints": {
       "allowed_adapters": [
-        "template-validation-v1"
+        "source-fidelity-review-v1",
+        "lean-obligation-v1"
       ],
       "allowed_methods": [
-        "discovery"
+        "discovery",
+        "derivation",
+        "computation",
+        "proof",
+        "formalization"
       ],
-      "max_attempts": 1,
+      "max_attempts": 20,
       "runtime": {
-        "max_output_bytes": 65536,
-        "max_retries": 1,
-        "max_transitions": 10,
-        "timeout_seconds": 60
+        "max_output_bytes": 5242880,
+        "max_retries": 3,
+        "max_transitions": 300,
+        "timeout_seconds": 1800
       }
     },
-    "created_at": "2026-09-06T00:00:00Z",
+    "created_at": "2026-08-16T18:20:00+08:00",
     "definitions": [
       {
-        "definition": "A non-admitted draft record used only to validate the physical public repository template.",
-        "term": "template placeholder"
+        "definition": "A solution satisfying the regularity, equation, divergence-free condition, initial condition and boundedness/decay clauses of the selected official branch for all nonnegative time.",
+        "term": "global smooth solution"
+      },
+      {
+        "definition": "Nonexistence of a globally smooth solution under one of the official counterexample branches, with all branch hypotheses satisfied.",
+        "term": "allowed breakdown"
       }
     ],
     "domain": {
-      "description": "Template-only placeholder domain; not a mathematical research question.",
+      "description": "Clay/Fefferman 官方陈述中的三维不可压 Navier–Stokes 方程，在 R³ 或三维周期空间上的允许初值、外力与解。",
       "objects": [
-        "template-placeholder"
+        "three-dimensional incompressible velocity field u",
+        "pressure p",
+        "smooth divergence-free initial data",
+        "the R³ and periodic settings in the official statement"
       ]
     },
-    "lifecycle": "draft",
+    "lifecycle": "active",
     "msc": [
-      "00A00"
+      "35Q30"
     ],
-    "problem_id": "problem:template-placeholder",
+    "problem_id": "problem:millennium-navier-stokes",
     "quantifiers": [
       {
-        "domain": "a reviewed public canonical ProblemContract supplied by the repository builder",
-        "kind": "find",
-        "variables": [
-          "replacement_problem"
-        ]
+        "domain": "one of the four closure alternatives (A)–(D) in the official Clay statement",
+        "kind": "decide",
+        "variables": []
       }
     ],
     "schema_version": "1.0.0",
     "sources": [
       {
-        "retrieved_at": "2026-09-06T00:00:00Z",
-        "source": "Vibe Mathing public Web Harness",
-        "source_record_id": "public-template-placeholder-v1",
-        "url": "https://github.com/vibemathing/vibe-mathing-problem-public-template"
+        "retrieved_at": "2026-08-16T18:20:00+08:00",
+        "source": "Clay Mathematics Institute",
+        "source_record_id": null,
+        "url": "https://www.claymath.org/millennium/Navier-Stokes-Equation/"
+      },
+      {
+        "retrieved_at": "2026-08-16T18:20:00+08:00",
+        "source": "Clay Mathematics Institute official problem descriptions",
+        "source_record_id": null,
+        "url": "https://www.claymath.org/wp-content/uploads/2022/02/MPPc.pdf"
       }
     ],
     "statement": {
-      "language": "en",
-      "text": "This is a non-research placeholder. Replace it with exactly one reviewed public ProblemContract before creating a public problem repository.",
+      "language": "zh-CN",
+      "text": "针对三维不可压 Navier–Stokes 方程，按 Charles L. Fefferman 的 Clay 官方陈述闭合以下任一分支：在 R³ 上对满足规定光滑性、散度为零和衰减条件的初值且外力为零证明全局光滑解存在；在三维周期空间对光滑散度为零初值且外力为零证明全局光滑解存在；或在官方允许的 R³/周期设置中构造满足规定光滑与有界条件的初值和外力，使全局光滑解不存在。弱解存在、二维结论、特殊对称解或离散数值爆破均不能替代这些接受分支。",
       "version": 1
     },
-    "title": "Vibe Mathing public problem repository template placeholder",
-    "updated_at": "2026-09-06T00:00:00Z"
+    "title": "Navier–Stokes 方程存在性与光滑性",
+    "updated_at": "2026-09-07T08:10:00Z"
   },
-  "problem_contract_sha256": "e64cd03254e03dd661eade23243c3c21793fc2d8bffa2d33c172cf8ed2e7f940"
+  "problem_contract_sha256": "4abdbffa2325e8421662fa31897c55976eb2d405f47729d4af0b31fc187fbc0f"
 }
 ```
