@@ -1,0 +1,72 @@
+{
+  "status": "proposal_only_not_admitted",
+  "schema_notice": "Review proposal, not an Attempt record or web-attempt packet",
+  "base_revision": "b47804fac940da277b6f756a925bb009dd409545",
+  "problem_id": "problem:millennium-navier-stokes",
+  "problem_contract_sha256": "4abdbffa2325e8421662fa31897c55976eb2d405f47729d4af0b31fc187fbc0f",
+  "proposed_identifiers": {
+    "attempt_id": "attempt:navier-stokes-source-fidelity-20260930",
+    "route_id": "route:navier-stokes-migration-audit-20260930",
+    "graph_id": "graph:navier-stokes-migration-20260930",
+    "first_obligation": "N1"
+  },
+  "objective": "Validate source fidelity and explicit prerequisites before any admitted mathematical execution",
+  "owner_skill_proposed": "math-discovery",
+  "evidence_ceiling": "candidate_only",
+  "nodes": [
+    {
+      "local_label": "N1",
+      "objective": "Official A/B/C/D scope and status audit",
+      "depends_on": [],
+      "status": "proposed_open"
+    },
+    {
+      "local_label": "N2",
+      "objective": "Conditional viscosity and parabolic scaling",
+      "depends_on": [
+        "N1"
+      ],
+      "status": "proposed_open"
+    },
+    {
+      "local_label": "N3",
+      "objective": "All-order residual extension audit",
+      "depends_on": [
+        "N1"
+      ],
+      "status": "proposed_open"
+    },
+    {
+      "local_label": "N4",
+      "objective": "Energy, divergence and uniqueness audit",
+      "depends_on": [
+        "N1",
+        "N3"
+      ],
+      "status": "proposed_open"
+    },
+    {
+      "local_label": "N5",
+      "objective": "Periodization and temporal flatness audit",
+      "depends_on": [
+        "N2",
+        "N3",
+        "N4"
+      ],
+      "status": "proposed_open"
+    },
+    {
+      "local_label": "N6",
+      "objective": "Static L2 does not bound H1 shortcut counterexample",
+      "depends_on": [
+        "N1"
+      ],
+      "status": "proposed_open"
+    }
+  ],
+  "root_bridge": "Actual blowup construction and all official C/D hypotheses remain unaudited by this work; N6 is not a PDE counterexample",
+  "prior_failed_route": "route:ns-c3-blowup-family-20260818: Galerkin artifact, not repeated",
+  "stop_condition": "Stop before research execution until trusted pre-admission and valid packet exist",
+  "best_verified_result": "Repository baseline validation and source byte identity only; no mathematical admission",
+  "next_obligation": "Trusted admission and source-fidelity review"
+}
