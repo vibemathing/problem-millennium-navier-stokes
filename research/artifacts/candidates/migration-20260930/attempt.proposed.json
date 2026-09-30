@@ -1,0 +1,22 @@
+{
+  "attempt_id": "attempt:ns-local-lemma-review-20260930",
+  "problem_id": "problem:millennium-navier-stokes",
+  "route_id": "route:ns-local-lemma-review-20260930",
+  "obligation_graph_id": "graph:ns-local-lemma-review-20260930",
+  "problem_contract_sha256": "4abdbffa2325e8421662fa31897c55976eb2d405f47729d4af0b31fc187fbc0f",
+  "generator": "candidate-generator",
+  "objective": "PENDING ADMISSION: review the archived conditional local lemma only; graph root is not Millennium closure",
+  "method": "proof",
+  "lifecycle": "blocked",
+  "started_at": "2026-09-30T00:20:00Z",
+  "completed_at": null,
+  "inputs": [
+    "problem-library/records/canonical-problems.jsonl"
+  ],
+  "claims": [
+    "For every nu>0, every smooth solution (u,p,f) of the viscosity-1 incompressible Navier-Stokes equations on an open spatial domain Omega times an interval I transforms to a viscosity-nu solution on sqrt(nu) Omega times I by u_nu(x,t)=sqrt(nu)u(x/sqrt(nu),t), p_nu(x,t)=nu p(x/sqrt(nu),t), f_nu(x,t)=sqrt(nu)f(x/sqrt(nu),t). When the spatial L2 norm is finite, its square scales by nu^(5/2). This conditional local transformation neither constructs blowup nor closes any Clay branch."
+  ],
+  "artifacts": [
+    "research/artifacts/candidates/migration-20260930/MIGRATION_PROPOSAL.md"
+  ]
+}
