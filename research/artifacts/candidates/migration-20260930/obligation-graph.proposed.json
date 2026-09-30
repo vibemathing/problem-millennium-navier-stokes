@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "graph_id": "graph:ns-local-lemma-review-20260930",
+  "problem_id": "problem:millennium-navier-stokes",
+  "attempt_id": "attempt:ns-local-lemma-review-20260930",
+  "route_id": "route:ns-local-lemma-review-20260930",
+  "problem_contract_sha256": "4abdbffa2325e8421662fa31897c55976eb2d405f47729d4af0b31fc187fbc0f",
+  "root_obligation_id": "obligation:ns-local-lemma-root-20260930",
+  "obligations": [
+    {
+      "obligation_id": "obligation:ns-local-lemma-root-20260930",
+      "kind": "root_claim",
+      "statement": {
+        "text": "For every nu>0, every smooth solution (u,p,f) of the viscosity-1 incompressible Navier-Stokes equations on an open spatial domain Omega times an interval I transforms to a viscosity-nu solution on sqrt(nu) Omega times I by u_nu(x,t)=sqrt(nu)u(x/sqrt(nu),t), p_nu(x,t)=nu p(x/sqrt(nu),t), f_nu(x,t)=sqrt(nu)f(x/sqrt(nu),t). When the spatial L2 norm is finite, its square scales by nu^(5/2). This conditional local transformation neither constructs blowup nor closes any Clay branch.",
+        "language": "en",
+        "formal_declaration": null
+      },
+      "statement_sha256": "b7860f5f1a4aa3a3b7c38709f6742bbb62f87c2701f1283efab8b4f8e1c1a3cc",
+      "dependencies": [
+        "obligation:ns-local-lemma-chain-20260930",
+        "obligation:ns-local-lemma-norm-20260930"
+      ],
+      "acceptance": {
+        "required_capabilities": [
+          "human_review",
+          "statement_faithfulness"
+        ],
+        "allowed_candidate_kinds": [
+          "proof"
+        ]
+      },
+      "source_refs": [
+        "research/artifacts/candidates/migration-20260930/MIGRATION_PROPOSAL.md"
+      ]
+    },
+    {
+      "obligation_id": "obligation:ns-local-lemma-chain-20260930",
+      "kind": "lemma",
+      "statement": {
+        "text": "Under the root assumptions, the transformed PDE residual is sqrt(nu) times the original residual at x/sqrt(nu), and div_x u_nu equals div_y u. Verify every chain-rule factor for arbitrary nu>0; nu=0 is excluded.",
+        "language": "en",
+        "formal_declaration": null
+      },
+      "statement_sha256": "e88612ff99546c55b751810f5f27e85b11c15a0aa55f481752a47b7865da0bd5",
+      "dependencies": [],
+      "acceptance": {
+        "required_capabilities": [
+          "human_review",
+          "statement_faithfulness"
+        ],
+        "allowed_candidate_kinds": [
+          "proof"
+        ]
+      },
+      "source_refs": [
+        "research/artifacts/candidates/migration-20260930/MIGRATION_PROPOSAL.md"
+      ]
+    },
+    {
+      "obligation_id": "obligation:ns-local-lemma-norm-20260930",
+      "kind": "lemma",
+      "statement": {
+        "text": "Under the root assumptions and finite L2 norm at a fixed time, change of variables x=sqrt(nu)y gives integral over sqrt(nu)Omega of |u_nu|^2 dx = nu^(5/2) times integral over Omega of |u|^2 dy.",
+        "language": "en",
+        "formal_declaration": null
+      },
+      "statement_sha256": "3bed2ec52ebaee01cd3b50dae251560b2b6216310ddc375c9d2e484c2e6dc01a",
+      "dependencies": [],
+      "acceptance": {
+        "required_capabilities": [
+          "human_review",
+          "statement_faithfulness"
+        ],
+        "allowed_candidate_kinds": [
+          "proof"
+        ]
+      },
+      "source_refs": [
+        "research/artifacts/candidates/migration-20260930/MIGRATION_PROPOSAL.md"
+      ]
+    }
+  ],
+  "created_at": "2026-09-30T00:20:00Z",
+  "supersedes": null
+}
