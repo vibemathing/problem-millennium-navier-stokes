@@ -1,0 +1,37 @@
+{
+  "status": "proposal_only_not_canonical",
+  "digest_definition": "SHA256 of exact downloaded response body bytes, not extracted text or Git blob SHA",
+  "sources": [
+    {
+      "url": "https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf",
+      "author": "Charles L. Fefferman",
+      "retrieved_at": "2026-09-30T00:12:00Z",
+      "retrieval_time_precision": "approximately one minute; downloaded during this migration",
+      "revision": "retrieved-content-sha256:c1b5f27b1a64705cfaf1afceea513db5deedca8a18ca56ab32e7f86445a06d0c",
+      "content_sha256": "c1b5f27b1a64705cfaf1afceea513db5deedca8a18ca56ab32e7f86445a06d0c",
+      "byte_count": 203736,
+      "quote": "EXISTENCE AND SMOOTHNESS OF THE NAVIER–STOKES EQUATION",
+      "quote_locator": "document title",
+      "license": "No redistribution license verified. Citation and short quotation only; source bytes not committed.",
+      "scope": "source identity and statement scope; not verification of a proof"
+    },
+    {
+      "url": "https://www.claymath.org/news/navier-stokes-announcement/",
+      "author": "Clay Mathematics Institute",
+      "retrieved_at": "2026-09-30T00:12:00Z",
+      "retrieval_time_precision": "approximately one minute; downloaded during this migration",
+      "revision": "retrieved-content-sha256:721e3e2b6df6004edd9ccf0beb15b98d6eac7f37d4d06b06c5ebfa10a7279c2b",
+      "content_sha256": "721e3e2b6df6004edd9ccf0beb15b98d6eac7f37d4d06b06c5ebfa10a7279c2b",
+      "byte_count": 91440,
+      "quote": "apparently been settled",
+      "quote_locator": "announcement body, published 2026-09-11",
+      "license": "No redistribution license verified. Citation and short quotation only; source bytes not committed.",
+      "scope": "source identity and statement scope; not verification of a proof"
+    }
+  ],
+  "remaining_work": [
+    "Verify permitted provenance/license policy with trusted importer",
+    "Review and version canonical source updates through authorized admission process",
+    "Lock exact versions of additional papers before treating their claims as evidence"
+  ]
+}
